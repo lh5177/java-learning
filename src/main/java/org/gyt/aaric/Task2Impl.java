@@ -7,11 +7,11 @@ import org.gyt.task.Task2;
  * - 启动，停止，加速，减速
  * Created by y27chen on 2016/11/16.
  */
-public class Car implements Task2 {
+public class Task2Impl implements Task2 {
 
     private double speed;
 
-    public Car() {
+    public Task2Impl() {
     }
 
     public void start() {
