@@ -13,13 +13,11 @@ public class Task5Validator extends BasicTaskValidator {
     }
 
     protected void doValidate() {
-        assertEquals("1260,1395,1435,1530,1827,2187", task.getResult(-1000, 2000));
-        assertEquals("1260,1395,1435,1530,1827,2187", task.getResult(100, 2000));
-        assertEquals("1260,1395,1435,1530,1827,2187", task.getResult(1000, 2000));
-        assertEquals("1260,1395,1435,1530,1827,2187", task.getResult(1000, 3000));
-        assertEquals("1260,1395,1435,1530,1827,2187,6880", task.getResult(1000, 9999));
-        assertEquals("1260,1395,1435,1530,1827,2187,6880", task.getResult(1000, 10000));
-        assertEquals("6880", task.getResult(5000, 9999));
+        assertEquals("", task.getResult(-1000, -500));
+        assertEquals("2,3,5,7", task.getResult(-100, 10));
+        assertEquals("2,3,5,7,11,13,17,19", task.getResult(1, 20));
+        assertEquals("2,3,5,7,11,13,17,19,23,29,31,37,41,43,47", task.getResult(1, 50));
+        assertEquals("2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97", task.getResult(1, 100));
     }
 
     protected String getValidatorInfo() {
