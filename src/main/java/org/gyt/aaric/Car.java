@@ -1,11 +1,13 @@
 package org.gyt.aaric;
 
+import org.gyt.task.Task2;
+
 /**
  * 第二次作业
  * - 启动，停止，加速，减速
  * Created by y27chen on 2016/11/16.
  */
-public class Car {
+public class Car implements Task2 {
 
     private double speed;
 
@@ -14,41 +16,23 @@ public class Car {
 
     public void start() {
         speed = 100;
-        printSpeed();
     }
 
     public void stop() {
         speed = 0;
-        printSpeed();
     }
 
     public void speedUp() {
         speed += 10;
-        printSpeed();
     }
 
     public void speedDown() {
-        speed -= 10;
-        printSpeed();
+        if (speed > 10) {
+            speed -= 10;
+        }
     }
 
-    public void printSpeed() {
-        System.out.println(String.format("汽车当前速度为:%.2f", speed));
-    }
-
-    public static void main(String[] args) {
-        Car car = new Car();
-        car.start();
-        car.speedUp();
-        car.speedUp();
-        car.speedDown();
-        car.stop();
-        car.speedUp();
-        car.speedUp();
-        car.speedUp();
-        car.speedUp();
-        car.speedUp();
-        car.speedUp();
-        car.stop();
+    public double getSpeed() {
+        return speed;
     }
 }
